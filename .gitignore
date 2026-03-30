@@ -1,0 +1,42 @@
+# 1. Структура директорий 
+data/raw/*
+!data/raw/.gitkeep
+
+data/processed/*
+!data/processed/.gitkeep
+
+submissions/*
+!submissions/.gitkeep
+
+# 2. Глобальный игнор тяжелых файлов данных
+*.csv
+*.xlsx
+*.geojson
+*.shp
+*.shx
+*.dbf
+*.prj
+*.html
+
+
+# Разрешаем Git запушить наш итоговый ответ для жюри МТС
+!submissions/FINAL_SUBMISSION_LGBM_3D.csv
+
+# 3. ML-логи и мусор от Jupyter
+.ipynb_checkpoints/
+catboost_info/
+*.log
+
+# 4. Кэш питона и скомпилированные файлы
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 5. Виртуальные окружения
+venv/
+env/
+.env
+
+# 6. Системные файлы
+.DS_Store
+Thumbs.db
